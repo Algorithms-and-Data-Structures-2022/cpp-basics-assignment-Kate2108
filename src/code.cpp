@@ -3,11 +3,13 @@
 #include <iostream>   // cout, printf
 #include <algorithm>  // fill, copy
 
+//Луковцева Екатерина Алексеевна 11-101
+
 namespace assignment {
 
   // Task 1
   int squared_diff(int left, int right) {
-    return abs(left*left - right*right);
+    return (left - right)*(left-right);
   }
 
   // Task 2
