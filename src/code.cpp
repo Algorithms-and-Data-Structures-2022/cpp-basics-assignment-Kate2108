@@ -15,6 +15,9 @@ namespace assignment {
     if (mask < 0 || bit_pos < 0){
       return false;
     }
+    else{
+      return((mask >> bit_pos) == 1);
+    }
 
     return false;
   }
@@ -34,15 +37,13 @@ namespace assignment {
 
   // Task 4
   int swap_args(int *left, int *right) {
-    int l = *left;
-    int r = *right;
-    if(left == 0 || right == 0){
-      return l, r;
+    if(*left == 0 || *right == 0){
+      return 0;
     }
-    int swap = l;
-    l = r;
-    r = swap;
-    return l, r;
+    int l = *left;
+    *left = *right;
+    *right = l;
+    return *left, *right;
 
   }
 
