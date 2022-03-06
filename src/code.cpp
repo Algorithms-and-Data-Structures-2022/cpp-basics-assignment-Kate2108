@@ -21,26 +21,28 @@ namespace assignment {
 
   // Task 3
   int max3(int left, int middle, int right) {
-    if (left >= middle >= right || left >= right >= middle){
+    if (left >= middle && left >= right){
       return left;
     }
-    else if (middle >= left >= right || middle >= right >= left){
-      return middle;
+    else if (right >= middle && right >= left ){
+      return right;
     }
     else{
-      return right;
+      return middle;
     }
   }
 
   // Task 4
   int swap_args(int *left, int *right) {
+    int l = *left;
+    int r = *right;
     if(left == 0 || right == 0){
-      return *left, *right;
+      return l, r;
     }
-    int *swap = right;
-    right = left;
-    left = swap;
-    return *left, *right;
+    int swap = l;
+    l = r;
+    r = swap;
+    return l, r;
 
   }
 
