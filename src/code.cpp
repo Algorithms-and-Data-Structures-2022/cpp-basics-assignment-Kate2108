@@ -39,19 +39,23 @@ namespace assignment {
 
   // Task 4
   void swap_args(int *left, int *right) {
-    if(*left != 0 && *right != 0){
+    if(left != 0 && right != 0){
       int l = *left;
-      *left = *right;
+      left = right;
       *right = l;
     }
   }
 
   // Task 5
   int arr_sum(int *arr, int length) {
-
-    // Write your code here ...
-
-    return 0;
+    if (arr == nullptr || length <= 0){
+      return 0;
+    }
+    int s = 0;
+  for (int i = 0; i < length; i++){
+    s += arr[i];
+  }
+    return s;
   }
 
   // Task 6
