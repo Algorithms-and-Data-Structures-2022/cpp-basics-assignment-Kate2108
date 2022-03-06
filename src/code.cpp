@@ -39,11 +39,12 @@ namespace assignment {
 
   // Task 4
   void swap_args(int *left, int *right) {
-    if(left != nullptr && right != nullptr){
-      int l = *left;
-      int r = *right;
-      *left = r;
-      *right = l;
+    if(left == nullptr || right == nullptr) {}
+    else{
+        int l = *left;
+        int r = *right;
+        *left = r;
+        *right = l;
     }
   }
 
