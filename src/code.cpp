@@ -36,15 +36,12 @@ namespace assignment {
   }
 
   // Task 4
-  int swap_args(int *left, int *right) {
-    if(*left == 0 || *right == 0){
-      return 0;
+  void swap_args(int *left, int *right) {
+    if(*left != 0 && *right != 0){
+      int l = *left;
+      *left = *right;
+      *right = l;
     }
-    int l = *left;
-    *left = *right;
-    *right = l;
-    return *left, *right;
-
   }
 
   // Task 5
