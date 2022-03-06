@@ -41,7 +41,8 @@ namespace assignment {
   void swap_args(int *left, int *right) {
     if(left != nullptr && right != nullptr){
       int l = *left;
-      *left = *right;
+      int r = *right;
+      *left = r;
       *right = l;
     }
   }
@@ -76,10 +77,12 @@ namespace assignment {
 
   // Task 7
   int *allocate_arr(int length, int init_value) {
-
-    // Write your code here ...
-
-    return nullptr;
+    if(length <0){
+      return nullptr;
+    }
+    int arr[length];
+    std::fill(arr, arr+length, init_value);
+    return arr;
   }
 
   // Task 8
