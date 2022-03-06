@@ -77,11 +77,11 @@ namespace assignment {
 
   // Task 7
   int *allocate_arr(int length, int init_value) {
-    if(length <0){
+    if(length <= 0){
       return nullptr;
     }
-    int arr[length];
-    std::fill(arr, arr+length, init_value);
+    int *arr = new int[length];
+    std::fill(arr, arr + length, init_value);
     return arr;
   }
 
