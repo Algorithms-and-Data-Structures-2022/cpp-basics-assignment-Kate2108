@@ -92,7 +92,7 @@ namespace assignment {
       return nullptr;
     }
     int *arr_out = new int[length];
-    std::copy(*arr_in, *arr_in + length, arr_out);
+    std::copy(arr_in, arr_in + length, arr_out);
 
     return arr_out;
   }
