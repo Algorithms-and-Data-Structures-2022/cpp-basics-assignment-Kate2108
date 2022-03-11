@@ -88,7 +88,7 @@ namespace assignment {
 
   // Task 8
   int *clone_arr(int *arr_in, int length) {
-    if (arr_in==nullptr || length <= 0){
+    if (arr_in == nullptr || length <= 0){
       return nullptr;
     }
     int *arr_out = new int[length];
